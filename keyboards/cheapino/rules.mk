@@ -5,3 +5,5 @@ RGBLIGHT_ENABLE = yes
 DEFERRED_EXEC_ENABLE = yes
 SRC += encoder.c
 SRC += matrix.c
+INTROSPECTION_KEYMAP_C += pbrehm.c
+COMBO_ENABLE = yes
