@@ -12,7 +12,7 @@
 
 // Pick good defaults for enabling home-row modifiers
 #define TAPPING_TERM 200
-#define PERMISSIVE_HOLD
+// #define PERMISSIVE_HOLD
 
 #define WS2812_DI_PIN GP16 // The pin connected to the data pin of the LEDs
 #define RGBLIGHT_LED_COUNT 1 // The number of LEDs connected
