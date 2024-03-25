@@ -1,6 +1,19 @@
 #include "wait.h"
 #include "quantum.h"
 
+#include "features/achordion.h"
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_achordion(keycode, record)) { return false; }
+  // Your macros ...
+
+  return true;
+}
+
+void matrix_scan_user(void) {
+  achordion_task();
+}
+
 // This is to keep state between callbacks, when it is 0 the
 // initial RGB flash is finished
 uint8_t _hue_countdown = 50;
