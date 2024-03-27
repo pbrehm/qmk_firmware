@@ -86,3 +86,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 */
+
+bool achordion_chord(uint16_t tap_hold_keycode,
+                     keyrecord_t* tap_hold_record,
+                     uint16_t other_keycode,
+                     keyrecord_t* other_record) {
+    // allow one hand ctrl stuff on layer 3 / media
+    if (tap_hold_record->event.key.row == 2 && tap_hold_record->event.key.col == 5) {
+        return true;
+    }
+
+  // Otherwise, follow the opposite hands rule.
+  return achordion_opposite_hands(tap_hold_record, other_record);
+}
+
